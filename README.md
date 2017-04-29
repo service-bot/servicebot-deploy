@@ -1,8 +1,5 @@
 # ServiceBot Docker Deployment
 
-
-# Instructions:
-
 ## ServiceBot runs the following containers:
 - PostgreSQL
 - ServiceBot
