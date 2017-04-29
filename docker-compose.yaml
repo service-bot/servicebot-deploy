@@ -9,13 +9,13 @@ services:
 #      CERTIFICATES: "./ssl/"
       POSTGRES_DB_PORT : "5432"
       POSTGRES_DB_HOST : "db"
-      POSTGRES_DB_USER : "xaas"
-      POSTGRES_DB_PASSWORD : "doggo"
+      POSTGRES_DB_USER : "servicebot_u"
+      POSTGRES_DB_PASSWORD : "secret_doggo"
       POSTGRES_DB_NAME : "sb_db"
 #      SMTP_HOST : "localhost"
 #      SMTP_USER : "postmaster@localhost"
 #      SMTP_PASSWORD : "password"
-#      SMTP_PORT : "587"
+#      SMTP_PORT : "587"`
       PORT : "3001"
     volumes:
       - upload-data:/usr/src/app/uploads
@@ -30,8 +30,8 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_USER : "servicebot"
-      POSTGRES_PASSWORD : "doggo"
+      POSTGRES_USER : "servicebot_u"
+      POSTGRES_PASSWORD : "secret_doggo"
       POSTGRES_DB : "sb_db"
     expose:
       - "5432"
