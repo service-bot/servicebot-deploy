@@ -25,7 +25,7 @@ Certificates should be named as follows:
 
 #### Configure docker-compose.yaml File
 
-For SMTP Edit and uncommentthe following lines to match
+For SMTP Edit and uncomment the following lines to match
  your SMTP server information
  
     SMTP_HOST : "localhost"
