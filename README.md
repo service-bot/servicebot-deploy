@@ -26,12 +26,14 @@ Certificates should be named as follows:
 #### Configure docker-compose.yaml File
 
 For SMTP Edit and uncomment the following lines to match
- your SMTP server information
+ your SMTP server information, 
  
     SMTP_HOST : "localhost"
     SMTP_USER : "postmaster@localhost"
     SMTP_PASSWORD : "password"
     SMTP_PORT : "587"
+
+if SMTP password has a $ you need to escape it with an additional $, see the [docker-compose documentation](https://docs.docker.com/compose/compose-file/#variable-substitution) for more information
 
 For SSL, uncomment the two SSL lines and change /path/to/ssl/certs/on/server
 to the path on your server`that you created for the certificates
