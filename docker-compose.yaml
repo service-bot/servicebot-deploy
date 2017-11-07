@@ -16,7 +16,7 @@ services:
 #      SMTP_USER : 'postmaster@localhost'
 #      SMTP_PASSWORD : 'password'
 #      SMTP_PORT : '587'
-      PORT : "3001"
+      PORT : "3000"
     volumes:
       - upload-data:/usr/src/app/uploads
       - environment-file:/usr/src/app/env
@@ -24,8 +24,8 @@ services:
     links:
       - db
     ports:
-      - "80:3001"
-      - "443:3000"
+      - "80:3000"
+      - "443:3001"
     command: ["sh", "-c", "node /usr/src/app/bin/wait-for-it.js db 5432  && npm run-script start"]
   db:
     image: postgres
