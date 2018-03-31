@@ -33,8 +33,11 @@ services:
       POSTGRES_USER : "servicebot_u"
       POSTGRES_PASSWORD : "secret_doggo"
       POSTGRES_DB : "sb_db"
+    volumes:
+      - db-data:/var/lib/postgresql/data
     expose:
       - "5432"
 volumes:
   upload-data:
   environment-file:
+  db-data:
